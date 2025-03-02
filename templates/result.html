@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Day Scan Report</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="{% if not report.safe %}red-theme{% else %}safe-theme{% endif %}">
+  <header>
+  <div class="logo-container">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Day Scan Logo" class="logo-image">
+    <h1 class="logo">Day Scan</h1>
+  </div>
+  <nav class="navbar">
+    <a href="/">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+  <main>
+  {% if report.safe %}
+    <h2 class="result-safe">Result: Safe to Install</h2>
+    <div class="icon-safe">✔️</div>
+  {% else %}
+    <h2 class="result-danger">Warning: Not Safe to Install</h2>
+    <div class="icon-danger">🚨</div>
+  {% endif %}
+  <div class="report-details">
+    {% if report.issues %}
+      <ul>
+        {% for issue in report.issues %}
+          <li>{{ issue }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No suspicious permissions or malware indicators found.</p>
+    {% endif %}
+  </div>
+  <a class="download-btn" href="{{ url_for('download_report', file_name=report.file_name) }}">Download PDF Report</a>
+</main>
+</body>
+</html>
+

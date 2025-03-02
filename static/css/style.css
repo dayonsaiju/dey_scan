@@ -1,0 +1,110 @@
+/* Cyber world background */
+body.cyber-bg {
+  background: url('../images/cyber_background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Lora', serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+header {
+  padding: 20px;
+}
+
+header .logo {
+  font-size: 28px;
+  color: #fff;
+}
+/* Logo and Navigation */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.navbar {
+  margin-left: auto;
+}
+
+.navbar a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Upload Container */
+.upload-container {
+  width: 320px;
+  margin: 100px auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.upload-btn {
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.upload-btn:hover {
+  background-color: #005fa3;
+}
+
+/* Result Page */
+.result-safe {
+  color: #060;
+}
+
+.result-danger {
+  color: #900;
+}
+
+.icon-safe {
+  font-size: 48px;
+  margin: 10px 0;
+  color: #060;
+}
+
+.icon-danger {
+  font-size: 48px;
+  margin: 10px 0;
+  color: #900;
+}
+
+/* Additional Styling */
+.report-details {
+  margin: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.download-btn {
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.download-btn:hover {
+  background-color: #005fa3;
+}
+
+

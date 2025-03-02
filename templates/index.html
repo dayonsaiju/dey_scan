@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Day Scan</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- Optionally add a Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+</head>
+<body class="cyber-bg">
+  <header>
+  <div class="logo-container">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Day Scan Logo" class="logo-image">
+    <h1 class="logo">Day Scan</h1>
+  </div>
+  <nav class="navbar">
+    <a href="/">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+  <main>
+    <div class="upload-container">
+      <h2>Upload an .apk file to scan</h2>
+      <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="apk_file" accept=".apk" required>
+        <button type="submit" class="upload-btn">Scan</button>
+      </form>
+      <!-- Placeholder for scanning animation -->
+      <div id="progress" style="display:none;">
+        <p>Scanning in progress...</p>
+      </div>
+    </div>
+  </main>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+
