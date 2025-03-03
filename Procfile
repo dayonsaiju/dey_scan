@@ -1,3 +1,4 @@
-web: gunicorn --workers=2 app:app
+web: gunicorn deyscan.wsgi --log-file -
+
 
 
